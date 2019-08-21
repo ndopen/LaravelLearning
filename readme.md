@@ -3,6 +3,13 @@
 # 项目内容
 
 # 拓展
+### 函数
+ - routes_class()
+
+
+### 样式文件
+ - fontawesome
+
 
 # 学习到的内容
 - homestead本地开发环境
@@ -99,3 +106,5 @@ yarn add @fortawesome/fontawesome-free --no-bin-links
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 ```
+
+## laravel用户
