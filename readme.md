@@ -1,72 +1,75 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# lravel快速开发学习
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# 项目内容
 
-## About Laravel
+# 拓展
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# 学习到的内容
+- homestead本地开发环境
+- 阿里云composer镜像
+- 框架安装
+```shell
+vagrant@homestead:~/code$ composer create-project --prefer-dist laravel/laravel laravel
+```
+    - 配置 ~/Homestead/Homestead.yaml文件,新增站点及数据库，重启vagrant环境 
+    - 配置hosts文件
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- env cofig 文件配置
+    - 配置env 文件
+    ```php
+        APP_NAME=learning
+        APP_ENV=local
+        APP_KEY=base64:LGIRkuW7vEGhNhvmxTCAi0AJ6tdyheSzSiGM8uRWd8g=
+        APP_DEBUG=true
+        APP_LOG_LEVEL=debug
+        APP_URL=http://laravel.test
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+        //使用getenv函数获取env文件配置
+        getenv('APP_ENV')
+    ```
+    - 配置cofig文件
+    > 所有配置文件存放在/config文件下
+    - config全局访问配置值
+    ```php
+    $value = config('app.timezone');
+    //运行时设置配置值
+    config(['app.timezone' => 'America/Chicago']);
+    ```
+    - 配置app
+        - 配置timezone
+        - 配置基础local
 
-## Learning Laravel
+- EditorConfig 插件解决代码统一风格
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 在laravel中使用辅助函数
+ > laravel 提供较多有用的辅助函数, 在任何地方创建您的函数文件，并添加到copsers，自动加载数组中
+ ```json
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "files": [
+            "app/helpers.php"   
+        ]
+    }
+//重加载composer.json文件
+composer dump-autoload
+ ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- 布局基础页面
+> 根据项目情况布局静态文件
+ 1. _header.balde.php
+ 2. _footer.balde.php
+ 3. app.balde.php
 
-## Laravel Sponsors
+ - {{ app()->getLocale() }}获取配置文件中的语言配置值
+ - {{ csrf_token() }} 方便前端的 JavaScript 脚本获取 CSRF 令牌
+ - {{ mix('css/app.css') }} 加载样式文件
+ - @yleid() 占位符声明，允许继承此模板的页面注入内容。
+ - @inlude() 包含此模板
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
