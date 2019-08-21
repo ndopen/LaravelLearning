@@ -3,4 +3,5 @@
 
 @section('content')
   <h1>这里是首页</h1>
+  <i class="far fa-address-card"></i>
 @stop

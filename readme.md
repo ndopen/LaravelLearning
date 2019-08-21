@@ -87,4 +87,15 @@ webpack.mix.js
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css').version();
 ```
+### 添加fontawesome字体图标
+```shell
+yarn add @fortawesome/fontawesome-free --no-bin-links
 
+载入样式app/
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+```
