@@ -60,16 +60,25 @@ vagrant@homestead:~/code$ composer create-project --prefer-dist laravel/laravel 
 composer dump-autoload
  ```
 
-- 布局基础页面
+## 布局基础页面
 > 根据项目情况布局静态文件
  1. _header.balde.php
  2. _footer.balde.php
  3. app.balde.php
 
- - {{ app()->getLocale() }}获取配置文件中的语言配置值
- - {{ csrf_token() }} 方便前端的 JavaScript 脚本获取 CSRF 令牌
- - {{ mix('css/app.css') }} 加载样式文件
- - @yleid() 占位符声明，允许继承此模板的页面注入内容。
- - @inlude() 包含此模板
+  - {{ app()->getLocale() }}获取配置文件中的语言配置值
+  - {{ csrf_token() }} 方便前端的 JavaScript 脚本获取 CSRF 令牌
+  - {{ mix('css/app.css') }} 加载样式文件
+  - @yleid() 占位符声明，允许继承此模板的页面注入内容。
+  - @inlude() 包含此模板
+
+### Laravel Mix前端管理工具使用
+
+### scss样式文件编辑
+
+### 辅助函数，获取当前路由名称函数
+
+### session函数使用
+
 
 
