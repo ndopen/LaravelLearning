@@ -80,5 +80,11 @@ composer dump-autoload
 
 ### session函数使用
 
-
+### Laravel Mix浏览器缓存问题
+```js
+webpack.mix.js
+//添加version（）函数
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css').version();
+```
 
