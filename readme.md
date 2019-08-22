@@ -108,9 +108,15 @@ yarn add @fortawesome/fontawesome-free --no-bin-links
 
 ```
 
-## laravel用户
+## laravel快速生成用户脚手架
 - 使用artisan命令快速生成laravel用户脚手架
 ```shell
  php artisan make:auth
 ```
-- 创建本地化文件
+- 创建本地汉化文件，使用安正超汉化扩展
+```shell
+composer require "overtrue/laravel-lang:~3.0"
+# 发布扩展文件
+php artisan lang:publish zh-CN
+```
+## laravel 注册
