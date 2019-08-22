@@ -7,6 +7,7 @@
  - routes_class()
 ### 扩张包
 - overtrue/laravel-lang:~3.0 支持52中语言的包
+- mews/captcha:~2.0 注册验证码
 
 ### 样式文件
  - fontawesome
@@ -120,3 +121,13 @@ composer require "overtrue/laravel-lang:~3.0"
 php artisan lang:publish zh-CN
 ```
 ## laravel 注册
+- @guest 对用户是否登陆进行判断
+
+## 注册验证码
+
+- 使用验证注册码 mews/captcha:~2.0
+```shell
+composer require "mews/captcha:~2.0"
+# 生成配置文件
+php artisan vendor:publish --provider='Mews\Captcha\CaptchaServiceProvider' 
+```
