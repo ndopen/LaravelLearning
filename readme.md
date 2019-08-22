@@ -135,6 +135,8 @@ php artisan vendor:publish --provider='Mews\Captcha\CaptchaServiceProvider'
 ## 邮箱认证
 - MustVerifyEmailTrait 集成用户Email认证
 - 邮件发送由中间件处理
+- 添加邮件发送提示认证
+
 ```php
 <?php
 
