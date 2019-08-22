@@ -131,3 +131,5 @@ composer require "mews/captcha:~2.0"
 # 生成配置文件
 php artisan vendor:publish --provider='Mews\Captcha\CaptchaServiceProvider' 
 ```
+
+## 邮箱认证
