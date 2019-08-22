@@ -5,7 +5,8 @@
 # 拓展
 ### 函数
  - routes_class()
-
+### 扩张包
+- overtrue/laravel-lang:~3.0 支持52中语言的包
 
 ### 样式文件
  - fontawesome
@@ -108,3 +109,8 @@ yarn add @fortawesome/fontawesome-free --no-bin-links
 ```
 
 ## laravel用户
+- 使用artisan命令快速生成laravel用户脚手架
+```shell
+ php artisan make:auth
+```
+- 创建本地化文件
