@@ -1,4 +1,4 @@
-# lravel快速开发学习
+<h1>lravel快速开发学习</h1>
 
 # 项目内容
 
@@ -81,22 +81,22 @@ composer dump-autoload
   - @yleid() 占位符声明，允许继承此模板的页面注入内容。
   - @inlude() 包含此模板
 
-### Laravel Mix前端管理工具使用
+## Laravel Mix前端管理工具使用
 
-### scss样式文件编辑
+## scss样式文件编辑
 
-### 辅助函数，获取当前路由名称函数
+## 辅助函数，获取当前路由名称函数
 
-### session函数使用
+## session函数使用
 
-### Laravel Mix浏览器缓存问题
+## Laravel Mix浏览器缓存问题
 ```js
 webpack.mix.js
 //添加version（）函数
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css').version();
 ```
-### 添加fontawesome字体图标
+## 添加fontawesome字体图标
 ```shell
 yarn add @fortawesome/fontawesome-free --no-bin-links
 
@@ -136,6 +136,7 @@ php artisan vendor:publish --provider='Mews\Captcha\CaptchaServiceProvider'
 - MustVerifyEmailTrait 集成用户Email认证
 - 邮件发送由中间件处理
 - 添加邮件发送提示认证
+- 事件监听
 
 ```php
 <?php
@@ -159,4 +160,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
     ];
 }
 ```
+## 忘记密码处理
+- Trait 的加载机制，重写sendResetResponse()方法
 
+## 用户相关，制作个人中心页面
+- resource 资源路由的使用
+- modelo与路由与视图的数据传输

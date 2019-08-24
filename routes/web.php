@@ -16,8 +16,6 @@
 // });
 Route::get('/', 'PagesController@root')->name('root');
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
 // 登陆注册路由
 // Auth::routes();
 // 用户身份验证相关的路由
@@ -39,3 +37,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+
+// UsersController
+Route::resource('users', 'UsersController', ['only' => ['show', 'edit', 'update']]);
