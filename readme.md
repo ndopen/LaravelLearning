@@ -8,6 +8,7 @@
 ### 扩张包
 - overtrue/laravel-lang:~3.0 支持52中语言的包
 - mews/captcha:~2.0 注册验证码
+- intervention/image 剪裁头像
 
 ### 样式文件
  - fontawesome
@@ -166,3 +167,16 @@ class User extends Authenticatable implements MustVerifyEmailContract
 ## 用户相关，制作个人中心页面
 - resource 资源路由的使用
 - modelo与路由与视图的数据传输
+
+## 编辑用户资料
+- 新增users字段
+- requset表单验证文件
+
+## 头像上传功能
+- 创建ImageUploadHandler辅助类处理图片上传
+- 使用UserRequset 限制头像分辨率
+- 使用intervention/image处理头像
+```shell
+composer require intervention/image
+php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravel5"
+```

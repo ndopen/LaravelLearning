@@ -3,6 +3,7 @@
 
 @section('content')
 
+
 <div class="row">
 
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
