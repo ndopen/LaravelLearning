@@ -9,6 +9,13 @@ use App\Handlers\ImageUploadHandler;
 
 class UsersController extends Controller
 {
+    // 过滤http请求
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
+
+
     public function show(User $user){
         // dd(compact('user'));
         return view('users.show', compact('user'));
@@ -17,12 +24,17 @@ class UsersController extends Controller
     // users edit
     public function edit(User $user)
     {
+        //授权决策
+        $this->authorize('update', $user);
+
         return view('users.edit', compact('user'));
     }
 
     // update
     public function update(ImageUploadHandler $uploader, UserRequest $request, User $user)
     {
+        $this->authorize('update', $user);
+
         $data = $request->all();
 
         if ($request->avatar) {

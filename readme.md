@@ -180,3 +180,6 @@ class User extends Authenticatable implements MustVerifyEmailContract
 composer require intervention/image
 php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravel5"
 ```
+## 用户访问权限
+- 使用中间件 (Middleware) 来过滤Http请求
+- 使用policy 授权策略类来限制用户操作权限
