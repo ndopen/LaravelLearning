@@ -9,6 +9,7 @@
 - overtrue/laravel-lang:~3.0 支持52中语言的包
 - mews/captcha:~2.0 注册验证码
 - intervention/image 剪裁头像
+- summerblue/generator:~1.0 代码生成器
 
 ### 样式文件
  - fontawesome
