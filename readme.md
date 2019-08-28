@@ -183,3 +183,12 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 ## 用户访问权限
 - 使用中间件 (Middleware) 来过滤Http请求
 - 使用policy 授权策略类来限制用户操作权限
+
+# 论坛帖子
+> 1. 分类 1 v N对应帖子
+> 2. 帖子 1 v 1 对应分类
+
+
+- 生成帖子分类Models文件
+- 批量生成分类数据(静态数据)
+
