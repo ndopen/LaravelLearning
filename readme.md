@@ -1,6 +1,7 @@
 <h1>lravel快速开发学习</h1>
 
-# 项目内容
+# 数据表
+
 
 # 拓展
 ### 函数
@@ -193,4 +194,4 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 生成话题分类Models文件
 - 批量生成分类数据(静态数据)
 - 生成话题骨架
-    
+  
