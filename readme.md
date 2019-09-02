@@ -190,6 +190,7 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 > 2. 帖子 1 v 1 对应分类
 
 
-- 生成帖子分类Models文件
+- 生成话题分类Models文件
 - 批量生成分类数据(静态数据)
-
+- 生成话题骨架
+    
