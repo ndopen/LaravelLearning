@@ -11,6 +11,10 @@
 - mews/captcha:~2.0 注册验证码
 - intervention/image 剪裁头像
 - summerblue/generator:~1.0 代码生成器
+```shell
+# laravel 开发调试工具类
+vagrant@homestead:~/code/laravel$ composer require "barryvdh/laravel-debugbar:~3.2" --dev
+```
 
 ### 样式文件
  - fontawesome
@@ -194,4 +198,7 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 生成话题分类Models文件
 - 批量生成分类数据(静态数据)
 - 生成话题骨架
-  
+- 调整话题列表页面
+- 解决N+1问题
+    - 使用laravel-debugbar工具
+
