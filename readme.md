@@ -14,6 +14,7 @@
 ```shell
 # laravel 开发调试工具类
 vagrant@homestead:~/code/laravel$ composer require "barryvdh/laravel-debugbar:~3.2" --dev
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 ```
 
 ### 样式文件
@@ -201,4 +202,5 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 调整话题列表页面
 - 解决N+1问题
     - 使用laravel-debugbar工具
-
+- 分类话题
+- 话题列表排序
