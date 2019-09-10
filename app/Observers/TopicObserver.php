@@ -18,4 +18,13 @@ class TopicObserver
     {
         //
     }
+    /**
+     * @description: 监控话题储存时触发相关的功能 
+     * @param {type} 
+     * @return: 
+     */
+    public function saving(Topic $topic)
+    {
+        $topic->excerpt = make_excerpt($topic->body);
+    }
 }

@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Description: 创建话题的相关认证
+ * @Author: your name
+ * @Date: 2019-08-28 20:20:12
+ * @LastEditTime: 2019-09-10 17:12:36
+ * @LastEditors: Please set LastEditors
+ */
 
 namespace App\Http\Requests;
 
@@ -10,17 +17,14 @@ class TopicRequest extends Request
         {
             // CREATE
             case 'POST':
-            {
-                return [
-                    // CREATE ROLES
-                ];
-            }
             // UPDATE
             case 'PUT':
             case 'PATCH':
             {
                 return [
-                    // UPDATE ROLES
+                    'title'       => 'required|min:2',
+                    'body'        => 'required|min:3',
+                    'category_id' => 'required|numeric',
                 ];
             }
             case 'GET':
@@ -35,7 +39,8 @@ class TopicRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+            'title.min' => '标题必须至少两个字符',
+            'body.min' => '文章内容必须至少三个字符',
         ];
     }
 }
