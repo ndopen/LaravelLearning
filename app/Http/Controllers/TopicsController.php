@@ -28,6 +28,11 @@ class TopicsController extends Controller
 		return view('topics.index', compact('topics'));
 	}
 
+	/**
+     * @description:帖子显示 
+     * @param {type} 
+     * @return: 
+     */
     public function show(Topic $topic)
     {
         return view('topics.show', compact('topic'));
