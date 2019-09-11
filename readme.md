@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-21 15:19:08
- * @LastEditTime: 2019-09-10 16:00:01
+ * @LastEditTime: 2019-09-11 11:24:16
  * @LastEditors: Please set LastEditors
  -->
 <h1>lravel快速开发学习</h1>
@@ -213,3 +213,5 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 话题列表排序
 - 用户话题列表
 - 创建话题
+- 使用simditor作为文本编辑框
+
