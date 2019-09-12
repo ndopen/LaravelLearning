@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-21 15:19:08
- * @LastEditTime: 2019-09-11 17:56:05
+ * @LastEditTime: 2019-09-12 14:48:42
  * @LastEditors: Please set LastEditors
  -->
 <h1>lravel快速开发学习</h1>
@@ -18,6 +18,7 @@
 - mews/captcha:~2.0 注册验证码
 - intervention/image 剪裁头像
 - summerblue/generator:~1.0 代码生成器
+- composer require "mews/purifier:~2.0" XXS过滤
 ```shell
 # laravel 开发调试工具类
 vagrant@homestead:~/code/laravel$ composer require "barryvdh/laravel-debugbar:~3.2" --dev
@@ -216,3 +217,6 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 使用simditor作为文本编辑框
 - 话题编辑页面上传图片功能
 - 处理帖子显示页面，调整优化样式文件
+- XXS脚本攻击处理
+
+
