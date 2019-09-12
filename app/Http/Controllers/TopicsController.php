@@ -63,18 +63,29 @@ class TopicsController extends Controller
         return redirect()->route('topics.show', $topic->id)->with('success', '帖子创建成功！');
 	}
 
+	/**
+    * @description:话题编辑 
+	* @param {type} 
+	* @return: 
+	*/
 	public function edit(Topic $topic)
 	{
-        $this->authorize('update', $topic);
-		return view('topics.create_and_edit', compact('topic'));
+		$this->authorize('update', $topic);
+		$categories = Category::all();
+		return view('topics.create_and_edit', compact('topic', 'categories'));
 	}
 
+	/**
+  * @description: 话题更新
+  * @param {type} 
+  * @return: 
+  */
 	public function update(TopicRequest $request, Topic $topic)
 	{
 		$this->authorize('update', $topic);
 		$topic->update($request->all());
 
-		return redirect()->route('topics.show', $topic->id)->with('message', 'Updated successfully.');
+		return redirect()->route('topics.show', $topic->id)->with('success', '话题跟新成功！');
 	}
 
 	public function destroy(Topic $topic)
