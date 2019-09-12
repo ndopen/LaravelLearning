@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-21 15:19:08
- * @LastEditTime: 2019-09-12 16:16:04
+ * @LastEditTime: 2019-09-12 16:39:12
  * @LastEditors: Please set LastEditors
  -->
 <h1>lravel快速开发学习</h1>
@@ -219,4 +219,5 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 处理帖子显示页面，调整优化样式文件
 - XXS脚本攻击处理
 - 晚上编辑话题
+- 删除话题
 

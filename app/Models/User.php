@@ -47,4 +47,14 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         return $this->hasMany(Topic::class);
     }
+
+    /**
+     * @description: 用户相关授权决策处理
+     * @param {type} 
+     * @return: 
+     */
+    public function isAuthorOf($model)
+    {
+        return $this->id == $model->user_id;
+    }
 }

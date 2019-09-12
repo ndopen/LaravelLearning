@@ -87,13 +87,17 @@ class TopicsController extends Controller
 
 		return redirect()->route('topics.show', $topic->id)->with('success', '话题跟新成功！');
 	}
-
+	/**
+  * @description:话题删除处理 
+  * @param {type} 
+  * @return: 
+  */
 	public function destroy(Topic $topic)
 	{
 		$this->authorize('destroy', $topic);
 		$topic->delete();
 
-		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
+		return redirect()->route('topics.index')->with('success', '话题删除成功!');
 	}
 
 	/**
