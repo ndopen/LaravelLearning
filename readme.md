@@ -221,4 +221,5 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - XXS脚本攻击处理
 - 晚上编辑话题
 - 删除话题
+- seo 友好的URL
 
