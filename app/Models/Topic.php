@@ -1,6 +1,14 @@
 <?php
+/*
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-09-16 23:09:06
+ * @LastEditTime: 2019-09-16 23:17:15
+ * @LastEditors: Please set LastEditors
+ */
 
 namespace App\Models;
+
 
 class Topic extends Model
 {
@@ -56,7 +64,11 @@ class Topic extends Model
     {
         return $query->orderBy('created_at', 'desc');
     }
-
+    /**
+     * @description: 话题显示路由定义
+     * @param {function} 
+     * @return: 
+     */
     public function link($params = [])
     {
         return route('topics.show', array_merge([$this->id, $this->slug], $params));
