@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-21 15:19:08
- * @LastEditTime: 2019-09-16 23:22:23
+ * @LastEditTime: 2019-09-17 17:32:52
  * @LastEditors: Please set LastEditors
  -->
 <h1>lravel快速开发学习</h1>
@@ -19,7 +19,10 @@
 - mews/captcha:~2.0 注册验证码
 - intervention/image 剪裁头像
 - summerblue/generator:~1.0 代码生成器
-- composer require "mews/purifier:~2.0" XXS过滤
+- mews/purifier:~2.0 XXS过滤
+- laravel/horizon:~3.1 队列控制台
+- predis/predis:~1.1 队列驱动
+
 ```shell
 # laravel 开发调试工具类
 vagrant@homestead:~/code/laravel$ composer require "barryvdh/laravel-debugbar:~3.2" --dev
@@ -223,5 +226,7 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 删除话题
 - seo 友好的URL
 - 使用队列
+
+
 
 
