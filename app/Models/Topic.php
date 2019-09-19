@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-16 23:09:06
- * @LastEditTime: 2019-09-16 23:17:15
+ * @LastEditTime: 2019-09-19 22:28:48
  * @LastEditors: Please set LastEditors
  */
 
@@ -24,6 +24,16 @@ class Topic extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * @description: 一个话题下有多个回复
+     * @param {type} 
+     * @return: Topic()->replies
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 
     /**

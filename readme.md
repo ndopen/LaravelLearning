@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-21 15:19:08
- * @LastEditTime: 2019-09-17 17:32:52
+ * @LastEditTime: 2019-09-20 00:29:08
  * @LastEditors: Please set LastEditors
  -->
 <h1>lravel快速开发学习</h1>
@@ -226,6 +226,10 @@ php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLa
 - 删除话题
 - seo 友好的URL
 - 使用队列
+
+## 帖子话题回复功能
+- 完成回复功能基础文件创建
+- 完成话题回复列表
 
 
 
