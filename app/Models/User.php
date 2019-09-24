@@ -90,4 +90,16 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         return $this->id == $model->user_id;
     }
+
+    /**
+     * @description: database insert notification_count = 0
+     * @param {type} 
+     * @return: 
+     */
+    public function markAsRead()
+    {
+        $this->notification_count = 0;
+        $this->save();
+        $this->unreadNotifications->markAsRead();
+    }
 }
