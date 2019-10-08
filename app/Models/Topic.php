@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-16 23:09:06
- * @LastEditTime: 2019-09-19 22:28:48
+ * @LastEditTime: 2019-10-08 15:39:29
  * @LastEditors: Please set LastEditors
  */
 
@@ -82,5 +82,16 @@ class Topic extends Model
     public function link($params = [])
     {
         return route('topics.show', array_merge([$this->id, $this->slug], $params));
+    }
+
+    /**
+     * @description:更新评论计算 
+     * @param {type} 
+     * @return: 
+     */
+    public function updateReplyCount()
+    {
+        $this->reply_count = $this->replies->count();
+        $this->save();
     }
 }

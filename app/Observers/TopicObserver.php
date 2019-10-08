@@ -11,7 +11,7 @@ use App\Jobs\TranslateSlug;
 class TopicObserver
 {
     /**
-     * @description:监控数据入口之前的事件 
+     * @description:监控数据入库之前的事件 
      * @param {type} 
      * @return: 
      */
@@ -36,5 +36,15 @@ class TopicObserver
             // 推送任务到队列
             dispatch(new TranslateSlug($topic));
         }
+    }
+
+    /**
+     * @description: 监控话题删除时，删除与话题相关联的评论
+     * @param {type} 
+     * @return: 
+     */
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
     }
 }

@@ -13,8 +13,13 @@ class ReplyPolicy extends Policy
         return true;
     }
 
+    /**
+     * @description:评论删除授权决策 
+     * @param {type} 
+     * @return: 
+     */
     public function destroy(User $user, Reply $reply)
     {
-        return true;
+        return $user->isAuthorOf($reply) || $user->isAuthorOf($reply->topic);
     }
 }
